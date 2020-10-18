@@ -1,5 +1,6 @@
 package pl.honesit.spring.core.components.printers;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;

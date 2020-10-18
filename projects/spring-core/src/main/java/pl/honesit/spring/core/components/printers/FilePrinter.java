@@ -13,14 +13,13 @@ import java.nio.file.Paths;
 public class FilePrinter implements Printer{
     @Override
     public void print(String message) {
-        String userHomePath = System.getProperty("user.home");
-        Path outputPath = Paths.get(userHomePath, "out.log");
-        try (PrintWriter printWriter = new PrintWriter(new FileWriter(outputPath.toFile(), true))) {
+        String userHome = System.getProperty("user.home");
 
-            printWriter.println(message);
+        try (PrintWriter writer = new PrintWriter(
+                new FileWriter(Paths.get(userHome, "spring.txt").toFile()), true)) {
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            writer.println(message);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -12,6 +12,7 @@ public class Application {
     public static void main(String[] args) {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(WarmUpConfiguration.class);
+
 //        context.scan("pl.honesit.spring.core.warmup");
 //        context.refresh();
 
